@@ -1,0 +1,28 @@
+class Artists
+  @@artists = {"efua” => "3bjAdDLHWwdkMsBBNaxXx6", “adele” => "4dpARuHxo51G3z768sgnrY", “beyonce” => "6vWDO969PvNqNYHIOW5v0m",“aliciakeys” => "3DiDSECUqqY1AuBP8qtaIa", “whitneyhouston” => "6XpaIBNiVzIetEPCWDvAFP" }
+
+  def printArtists()
+    for artist in @@artists 
+      puts artist
+    end 
+  end 
+ 
+
+class UserService
+@@user = ["welcome", "getArtist", "closingStatement"]
+
+def welcomeUser
+  puts "Hello Friend, Welcome to the Top 5 releases App. If you wish to see the top 5 releases of these powerful artists type 'y' if not type 'n' "
+        input = gets.strip
+        if input == "n"  then puts "I hope you find some music you like better , have a great day"
+        elsif input == "y"  then puts  "Please enter which artist you would like to see the top 5 releases of based on the list below :"
+          Artists.new.printArtists
+            input = gets.strip
+        else puts "incorrect Artist choice, please choose one of the following Artists :"
+       Artits.new.printArtists
+            input = gets.strip
+        end  
+      end 
+    end
+  end
+end
